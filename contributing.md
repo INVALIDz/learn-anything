@@ -51,7 +51,7 @@ iOS app will use [SwiftUI](https://developer.apple.com/xcode/swiftui/) & [Compos
 
 ## Possible issues
 
-If you run into issues that aren't yet documented/fixed but you have a solution for, please submit a PR! Otherwise open an issue. ♥️
+If you run into issues that aren't yet fixed or documented here but you have a solution for, please submit a PR! Otherwise open an issue. ♥️
 
 #### @prisma/client did not initialize yet error when running `yarn start`
 
