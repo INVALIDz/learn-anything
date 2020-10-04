@@ -4,10 +4,10 @@ Thank you for wanting to contribute!
 
 Any type of contribution is welcome, not just code. You can help with:
 
-- **Bugs / Features:** Share bug reports or make feature requests. Check [open issues](../../issues) first in case it was already brought up.
+- **Bugs / Features:** Share bug reports or make feature requests. Check [existing issues](../../issues) to avoid duplicates.
 - **Community:** Contribute to open discussions. Join our [Discord community](https://discord.gg/KKYdWjt).
-- **Code:** Run this project locally by reading instructions below. Take a look at [open issues](../../issues) and see if anything sparks your interest.
-- **Docs:** Docs are the best contribution anyone can make to any project.
+- **Code:** Run this project locally by reading instructions below. Take a look at open issues and see if something sparks your interest.
+- **Docs:** Docs are the best contribution anyone can make to any project. Update docs if something is unclear or is missing.
 
 ## Dependencies
 
@@ -18,7 +18,7 @@ Learn Anything currently uses:
 - [Postgres](https://www.postgresql.org) to store all data.
 - [Go](https://golang.org). Currently use Go to write the CLI tool to communicate with LA. CLI is inspired by [gh](https://github.com/cli/cli).
 
-## Start project
+## Run project
 
 The repo consists of these main folders.
 
@@ -28,7 +28,7 @@ The repo consists of these main folders.
 
 [HyperLink Academy](https://gitlab.com/jaredpereira/hyperlink-academy) and [lorawan-stack](https://github.com/TheThingsNetwork/lorawan-stack) are great code inspirations.
 
-To run the website:
+### Run web
 
 1. Clone project: `git clone https://github.com/learn-anything/learn-anything`
 2. Have Postgres running locally. Can [install Postgres](https://www.postgresql.org) and run a local server. If you are on mac, [Postico](https://eggerapps.at/postico2/) is a nice GUI client for Postgres. For setting up a postgresql locally, prisma has a [nice guide](https://www.prisma.io/docs/guides/database-workflows/setting-up-a-database/postgresql)
@@ -44,11 +44,11 @@ In future we will have a Dockerfile for both running the database/backend on ser
 
 Check [web](web) for more details.
 
-### CLI
+### Run CLI
 
 Not yet done but it will be a Go CLI tool based off [gh](https://github.com/cli/cli). The goal is to be able to save, retrieve links/ideas from CLI.
 
-## iOS/Android apps
+### iOS/Android apps
 
 There will be native apps built. iOS app will use [SwiftUI](https://developer.apple.com/xcode/swiftui/) & [Composable Architecture](https://github.com/pointfreeco/swift-composable-architecture).
 
