@@ -9,24 +9,17 @@ Any type of contribution is welcome, not just code. You can help with:
 - **Code:** Run this project locally by reading instructions below. Take a look at open issues and see if something sparks your interest.
 - **Docs:** Docs are the best contribution anyone can make to any project. Update docs if something is unclear or is missing.
 
-## Dependencies
+## Folder structure
 
-Learn Anything currently uses:
+- [web](web) holds all the website code. [NextJS](https://nextjs.org) pages, [Prisma](https://www.prisma.io) queries. Using [BlitzJS](https://blitzjs.com) framework.
+- [docs](docs) holds documentation. Other docs related to LA can be found [here](https://www.notion.so/learnany/Public-b3b8e046a6bc44549367b84423360b93).
+- [api/cmd](api/cmd) holds CLI tool written in [Go](https://golang.org).
 
-- [NextJS](https://nextjs.org) with [BlitzJS](https://blitzjs.com) to render the website.
-  - BlitzJS gives nice features like setting up [Prisma](https://www.prisma.io/) which lets us query our database from both backend and front end.
-- [Postgres](https://www.postgresql.org) to store all data.
-- [Go](https://golang.org). Currently use Go to write the CLI tool to communicate with LA. CLI is inspired by [gh](https://github.com/cli/cli).
+[Postgres](https://www.postgresql.org) database is used to store all data.
+
+[HyperLink Academy](https://gitlab.com/jaredpereira/hyperlink-academy) (uses NextJS/Prisma) and [lorawan-stack](https://github.com/TheThingsNetwork/lorawan-stack) (nice contribution guidelines/process, code) are great code inspirations.
 
 ## Run
-
-The repo consists of these main folders.
-
-- [api/cmd](api/cmd) holds the CLI tool.
-- [docs](docs) holds documentation. Other docs related to LA (not directly code related) can be found [here](https://www.notion.so/learnany/Public-b3b8e046a6bc44549367b84423360b93).
-- [web](web) holds all the website code. NextJS pages, Prisma queries.
-
-[HyperLink Academy](https://gitlab.com/jaredpereira/hyperlink-academy) and [lorawan-stack](https://github.com/TheThingsNetwork/lorawan-stack) are great code inspirations.
 
 ### Run web
 
@@ -46,15 +39,15 @@ Check [web](web) for more details.
 
 ### Run CLI
 
-Not yet done but it will be a Go CLI tool based off [gh](https://github.com/cli/cli). The goal is to be able to save, retrieve links/ideas from CLI.
+Once API is done. CLI will be built. Should be able to save, retrieve links/ideas from CLI.
 
-### iOS/Android apps
+CLI is inspired by [gh](https://github.com/cli/cli) in design.
 
-There will be native apps built. iOS app will use [SwiftUI](https://developer.apple.com/xcode/swiftui/) & [Composable Architecture](https://github.com/pointfreeco/swift-composable-architecture).
+### Run iOS/Android apps
 
-## Docs
+Once API is done. There will be native apps built.
 
-All docs can be improved. Feel free to edit [docs/notes.md](docs/notes.md) file as it's used as a general note file. Feel free to free form discuss code, data model, anything.
+iOS app will use [SwiftUI](https://developer.apple.com/xcode/swiftui/) & [Composable Architecture](https://github.com/pointfreeco/swift-composable-architecture).
 
 ## Troubleshooting
 
