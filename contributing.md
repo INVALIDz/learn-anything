@@ -49,11 +49,11 @@ Once API is done. There will be native apps built.
 
 iOS app will use [SwiftUI](https://developer.apple.com/xcode/swiftui/) & [Composable Architecture](https://github.com/pointfreeco/swift-composable-architecture).
 
-## Troubleshooting
+## Possible issues
 
-If you run into issues that should be documented here, please submit a PR! ❤️
+If you run into issues that aren't yet documented/fixed but you have a solution for, please submit a PR! Otherwise open an issue. ♥️
 
-@prisma/client did not initialize yet error when running `yarn start`
+#### @prisma/client did not initialize yet error when running `yarn start`
 
 Workaround
 
