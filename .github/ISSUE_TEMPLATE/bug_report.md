@@ -13,5 +13,4 @@ labels: bug
 ### Steps to Reproduce:
 
 1. 
-2. 
 

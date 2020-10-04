@@ -22,7 +22,7 @@ Roughly, these are the areas LA tries to tackle:
 
 We share [all of our plans & docs in public](https://www.notion.so/Public-b3b8e046a6bc44549367b84423360b93).
 
-Check [contributing.md](contributing.md) for instructions how to run the project and how to contribute.
+Check [contributing.md](contributing.md) for instructions on how to run the project and how to contribute.
 
 Check [0.1 Release (link manager with tags, user profiles) issue](../../issues/3) for things that should be worked on before the initial release.
 
