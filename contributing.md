@@ -18,7 +18,7 @@ Learn Anything currently uses:
 - [Postgres](https://www.postgresql.org) to store all data.
 - [Go](https://golang.org). Currently use Go to write the CLI tool to communicate with LA. CLI is inspired by [gh](https://github.com/cli/cli).
 
-## Run project
+## Run
 
 The repo consists of these main folders.
 
