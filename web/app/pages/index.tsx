@@ -1,43 +1,8 @@
 import addLink from "app/auth/mutations/addLink"
-import logout from "app/auth/mutations/logout"
 import { useCurrentUser } from "app/hooks/useCurrentUser"
 import Layout from "app/layouts/Layout"
-import { BlitzPage, Link } from "blitz"
+import { BlitzPage } from "blitz"
 import React, { Suspense, useEffect, useRef } from "react"
-
-const UserInfo = () => {
-  const currentUser = useCurrentUser()
-
-  if (currentUser) {
-    return (
-      <>
-        <button
-          className="button small"
-          onClick={async () => {
-            await logout()
-          }}
-        >
-          Logout
-        </button>
-      </>
-    )
-  } else {
-    return (
-      <div className="text-center">
-        <Link href="/signup">
-          <a className="button small">
-            <strong className="mr-2">Sign Up</strong>
-          </a>
-        </Link>
-        <Link href="/login">
-          <a className="button small">
-            <strong>Login</strong>
-          </a>
-        </Link>
-      </div>
-    )
-  }
-}
 
 const AddLink = () => {
   const currentUser = useCurrentUser()
@@ -120,9 +85,6 @@ const Home: BlitzPage = () => {
   return (
     <div className="container">
       <main>
-        {/* <Suspense fallback="Loading...">
-          <UserInfo />
-        </Suspense> */}
         <Suspense fallback="Loading...">
           <AddLink />
         </Suspense>

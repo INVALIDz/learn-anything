@@ -7,7 +7,7 @@ const LoginPage: BlitzPage = () => {
   const router = useRouter()
 
   return (
-    <div className="text-center">
+    <div>
       <LoginForm onSuccess={() => router.push("/")} />
     </div>
   )

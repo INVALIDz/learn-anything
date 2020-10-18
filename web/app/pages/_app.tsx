@@ -3,7 +3,7 @@ import LoginForm from "app/auth/components/LoginForm"
 import logout from "app/auth/mutations/logout"
 import { useCurrentUser } from "app/hooks/useCurrentUser"
 import "app/styles/index.css"
-import { AppProps, ErrorComponent, Link } from "blitz"
+import { AppProps, ErrorComponent, Link, useRouter } from "blitz"
 import React, { Suspense } from "react"
 import { ErrorBoundary, FallbackProps } from "react-error-boundary"
 import { queryCache } from "react-query"
@@ -19,11 +19,12 @@ const NavItem = (props: { title: string; url: string }) => {
 }
 
 const NavBar = () => {
+  const router = useRouter()
   return (
     <nav className="flex">
       <ul className="flex">
         {/* TODO: add icon */}
-        <NavItem title={"Home"} url={"/"} />
+        {router.pathname !== "/" && <NavItem title={"Home"} url={"/"} />}
       </ul>
       <ul>
         <Suspense fallback="Loading...">
@@ -54,7 +55,7 @@ const UserInfo = () => {
     return (
       <li className="float-right">
         <Link href="/signup">
-          <a>Sign Up</a>
+          <a className="mx-2">Sign Up</a>
         </Link>
         <Link href="/login">
           <a>Login</a>
@@ -66,6 +67,7 @@ const UserInfo = () => {
 
 export default function App({ Component, pageProps }: AppProps) {
   const getLayout = Component.getLayout || ((page) => page)
+  console.log(Component, "comp")
 
   return (
     <ErrorBoundary
@@ -89,6 +91,12 @@ export default function App({ Component, pageProps }: AppProps) {
       )}
     </ErrorBoundary>
   )
+}
+
+App.getInitialProps = async (ctx) => {
+  return {
+    route: ctx.router.route,
+  }
 }
 
 function RootErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
