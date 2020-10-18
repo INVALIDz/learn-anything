@@ -5,11 +5,6 @@ import Layout from "app/layouts/Layout"
 import { BlitzPage, Link } from "blitz"
 import React, { Suspense, useEffect, useRef } from "react"
 
-/*
- * This file is just for a pleasant getting started page for your new app.
- * You can delete everything in here and start from scratch if you like.
- */
-
 const UserInfo = () => {
   const currentUser = useCurrentUser()
 
@@ -28,7 +23,7 @@ const UserInfo = () => {
     )
   } else {
     return (
-      <>
+      <div className="text-center">
         <Link href="/signup">
           <a className="button small">
             <strong className="mr-2">Sign Up</strong>
@@ -39,7 +34,7 @@ const UserInfo = () => {
             <strong>Login</strong>
           </a>
         </Link>
-      </>
+      </div>
     )
   }
 }
@@ -112,15 +107,27 @@ const AddLink = () => {
   )
 }
 
+const Search = () => {
+  return (
+    <div className="text-center flex flex-col my-2">
+      <span className="font-bold mb-2">I want to learn</span>
+      <input className="w-40 mx-auto mx" type="text" />
+    </div>
+  )
+}
+
 const Home: BlitzPage = () => {
   return (
     <div className="container">
       <main>
-        <Suspense fallback="Loading...">
+        {/* <Suspense fallback="Loading...">
           <UserInfo />
-        </Suspense>
+        </Suspense> */}
         <Suspense fallback="Loading...">
           <AddLink />
+        </Suspense>
+        <Suspense fallback="Loading...">
+          <Search />
         </Suspense>
       </main>
 

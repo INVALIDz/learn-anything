@@ -1,11 +1,68 @@
-import { AppProps, ErrorComponent } from "blitz"
+import { CSSReset, ThemeProvider } from "@chakra-ui/core"
+import LoginForm from "app/auth/components/LoginForm"
+import logout from "app/auth/mutations/logout"
+import { useCurrentUser } from "app/hooks/useCurrentUser"
+import "app/styles/index.css"
+import { AppProps, ErrorComponent, Link } from "blitz"
+import React, { Suspense } from "react"
 import { ErrorBoundary, FallbackProps } from "react-error-boundary"
 import { queryCache } from "react-query"
-import LoginForm from "app/auth/components/LoginForm"
 
-import "app/styles/index.css"
+const NavItem = (props: { title: string; url: string }) => {
+  return (
+    <li className="mx-2">
+      <a className="text-gray-800" href={props.url}>
+        {props.title}
+      </a>
+    </li>
+  )
+}
 
-import { CSSReset, ThemeProvider } from "@chakra-ui/core";
+const NavBar = () => {
+  return (
+    <nav className="flex">
+      <ul className="flex">
+        {/* TODO: add icon */}
+        <NavItem title={"Home"} url={"/"} />
+      </ul>
+      <ul>
+        <Suspense fallback="Loading...">
+          <UserInfo />
+        </Suspense>
+      </ul>
+    </nav>
+  )
+}
+
+const UserInfo = () => {
+  const currentUser = useCurrentUser()
+
+  if (currentUser) {
+    return (
+      <>
+        <li
+          className="absolute right-0"
+          onClick={async () => {
+            await logout()
+          }}
+        >
+          Logout
+        </li>
+      </>
+    )
+  } else {
+    return (
+      <li className="float-right">
+        <Link href="/signup">
+          <a>Sign Up</a>
+        </Link>
+        <Link href="/login">
+          <a>Login</a>
+        </Link>
+      </li>
+    )
+  }
+}
 
 export default function App({ Component, pageProps }: AppProps) {
   const getLayout = Component.getLayout || ((page) => page)
@@ -19,12 +76,19 @@ export default function App({ Component, pageProps }: AppProps) {
         queryCache.resetErrorBoundaries()
       }}
     >
-      {getLayout(<ThemeProvider>
-        <CSSReset />
-        <Component {...pageProps} />
-      </ThemeProvider>)}
+      {getLayout(
+        <ThemeProvider>
+          <CSSReset />
+          <NavBar />
+          {/* TODO: why suspense? */}
+          {/* <Suspense fallback="Loading...">
+            <UserInfo />
+          </Suspense> */}
+          <Component {...pageProps} />
+        </ThemeProvider>
+      )}
     </ErrorBoundary>
-  );
+  )
 }
 
 function RootErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
