@@ -5,7 +5,7 @@ Thank you for wanting to contribute!
 Any type of contribution is welcome, not just code. You can help with:
 
 - **Bugs / Features:** Share bug reports or make feature requests. Check [existing issues](../../issues) to avoid duplicates.
-- **Community:** Contribute to open discussions. Join our [Discord community](https://discord.gg/KKYdWjt).
+- **Community:** Contribute to open discussions. Join our [Discord community](https://discord.gg/bxtD8x6aNF).
 - **Code:** Run this project locally by reading instructions below. Take a look at open issues and see if something sparks your interest.
 - **Docs:** Docs are the best contribution anyone can make to any project. Update docs if something is unclear or is missing.
 

@@ -10,7 +10,7 @@ The vision of project is to create the best platform possible for learning any t
 
 Please read [our roadmap](https://docs.learn-anything.xyz/roadmap) where we outline the problems we want to solve with building this platform and how we plan to solve them.
 
-If you are interested in helping us out, please join our community on [Discord](https://discord.gg/KKYdWjt) to learn & build this project together.
+If you are interested in helping us out, please join our community on [Discord](https://discord.gg/bxtD8x6aNF) to learn & build this project together.
 
 Roughly, these are the areas LA tries to tackle:
 
@@ -44,8 +44,8 @@ As new version will be built, old version will be moved to a subdomain.
 
 ## Develop & learn together 🦊
 
-We try to run the project as openly as possible and all communication is done either in GitHub issues/prs or on [Discord](https://discord.gg/KKYdWjt).
+We try to run the project as openly as possible and all communication is done either in GitHub issues/prs or on [Discord](https://discord.gg/bxtD8x6aNF).
 
 If you are stuck on anything and either can't run the project or have trouble implementing something, reach out on Discord #dev channel. We also do pair programming sessions on Discord in one of the voice channels.
 
-[![MIT](http://bit.ly/mitbadge)](license) [![Discord](https://img.shields.io/badge/-Discord-0a0a0a.svg?style=flat&colorA=0a0a0a)](https://discord.gg/KKYdWjt) [![Twitter](http://bit.ly/latwitt)](https://twitter.com/learnanything_)
+[![MIT](http://bit.ly/mitbadge)](license) [![Discord](https://img.shields.io/badge/-Discord-0a0a0a.svg?style=flat&colorA=0a0a0a)](https://discord.gg/bxtD8x6aNF) [![Twitter](http://bit.ly/latwitt)](https://twitter.com/learnanything_)

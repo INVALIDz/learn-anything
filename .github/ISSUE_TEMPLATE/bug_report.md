@@ -8,9 +8,7 @@ labels: bug
 
 ### Bug 🐞
 
-
-
 ### Steps to Reproduce:
 
-1. 
+1.
 
